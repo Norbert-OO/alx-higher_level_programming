@@ -8,7 +8,7 @@ else:
     last_digit = number % 10
 
 if last_digit > 5:
-    suffix = "and is greater that 5"
+    suffix = "and is greater than 5"
 elif last_digit == 0:
     suffix = "and is 0"
 else:
