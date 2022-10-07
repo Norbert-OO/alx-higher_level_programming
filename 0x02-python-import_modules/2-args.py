@@ -13,3 +13,7 @@ def main():
                 continue
             print{"{}: {}".format(argv.index(argv), arg))
 
+
+if __name__ == "__main__":
+    main()
+
