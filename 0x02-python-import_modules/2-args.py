@@ -11,7 +11,7 @@ def main():
         for arg in argv:
             if argv.index(arg) == 0:
                 continue
-            print{"{}: {}".format(argv.index(argv), arg))
+            print{"{}: {}".format(argv.index(arg), arg))
 
 
 if __name__ == "__main__":
