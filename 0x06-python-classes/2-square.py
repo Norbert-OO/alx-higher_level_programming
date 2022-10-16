@@ -1,37 +1,31 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 
-"""A module for a square class with private args
+"""A module that defines a square"""
 
-Example:
-    This module is expected to have a Class with private args
-    $ ./2-main.py
-    <class '2-square.Square'>
-    {'_Square__size': 3}
-    <class '2-square.Square'>
-    {'_Square__size': 0}
-    'Square' object has no attribute 'size'
-    'Square' object has no attribute '__size'
-    size must be an integer
-    size must be >= 0
-"""
 
 class Square:
-    """A class square that defines a mathematical square
-    """
-    def __init__(self, size=0):
-        """Initialization os class Square
+    """A class that represents a square"""
 
+    def __init__(self, size=0):
+        """Initializing this square class
         Args:
-            __size (int): length or width should be equal and private
-        Note:
-            size is expected to be an integer >= 0 
+            size: Represents the size of the square defined
+        Raises:
+            TypeError: If size is not integer
+            ValueError: If size is less than zero
         """
 
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
         if size < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
+
         self.__size = size
 
+    def area(self):
+        """
+        Calculate area of the square
+        Returns: The square of the size
+        """
+
+        return (self.__size ** 2)
